@@ -1,0 +1,1 @@
+let TESTING: string = "Testar";
