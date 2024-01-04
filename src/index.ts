@@ -30,7 +30,7 @@ async function fetchApi() {
             CreateBooks(API_Return);
     } catch (e) {
         console.log(e);
-    }   
+    }  
 }
 
 // Generate the books from the fetch.
