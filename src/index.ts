@@ -31,7 +31,6 @@ async function fetchApi() {
     } catch (e) {
         console.log(e);
     }
-
 }
 
 // Generate the books from the fetch.
