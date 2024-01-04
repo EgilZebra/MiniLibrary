@@ -18,7 +18,7 @@ interface BOOK {
 let NumberOfBooks: number = 0; 
 let bookname: string = "";
 let BASE_URL: string = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
-let BookFolder = document.querySelector("main");
+let BookFolder: HTMLElement = document.querySelector("main");
 let API_Return: Array<BOOK>= [];
 
 // Fetch the data
@@ -45,9 +45,9 @@ function fetchApi(): void {
 function CreateBooks(API_Return: Array<BOOK>): void {
 
     // Create the Headline-element for the grid.
-    let GridHeader = document.createElement("div")
-    let GridHeadline = document.createElement("h1");
-    let GridLead = document.createElement("p");
+    let GridHeader: HTMLElement = document.createElement("div")
+    let GridHeadline: HTMLElement = document.createElement("h1");
+    let GridLead: HTMLElement = document.createElement("p");
     GridHeader.classList.add("grid-header")
     GridHeadline.textContent = "Check out our selection of children's books"
     GridLead.textContent = "This week we can offer enhcanting stories for all ages"
@@ -60,10 +60,10 @@ function CreateBooks(API_Return: Array<BOOK>): void {
         let createAbook: BOOK = API_Return[i];
         
         // Create the elements
-        let wrapper = document.createElement("article");
-        let headline = document.createElement("h2");
-        let author = document.createElement("h3");
-        let audience = document.createElement("p");
+        let wrapper: HTMLElement = document.createElement("article");
+        let headline: HTMLElement = document.createElement("h2");
+        let author: HTMLElement = document.createElement("h3");
+        let audience: HTMLElement = document.createElement("p");
 
         // Add the values
         headline.textContent = createAbook.title;
@@ -105,22 +105,22 @@ function ChooseBook(): void {
     }
 
     // Create the elemets
-    let infowrapper = document.createElement("div");   
-    let infoCard = document.createElement("div");   
-    let wrapper = document.createElement("article");    
-    let returnButton = document.createElement("button");    
-    let ReserveBoook = document.createElement("button");   
-    let optionwrapper = document.createElement("div");    
-    let headlineOne = document.createElement("h2");    
-    let headlineTwo = document.createElement("h2");    
-    let authorOne = document.createElement("h3");
-    let authorTwo = document.createElement("h3");
-    let audience = document.createElement("p");
-    let publisher = document.createElement("p")
-    let plot = document.createElement("p")
-    let year = document.createElement("p")
-    let pages = document.createElement("p")
-    let lesserInfoCard = document.createElement("div");
+    let infowrapper: HTMLElement = document.createElement("div");   
+    let infoCard: HTMLElement = document.createElement("div");   
+    let wrapper: HTMLElement = document.createElement("article");    
+    let returnButton: HTMLElement = document.createElement("button");    
+    let ReserveBoook: HTMLElement = document.createElement("button");   
+    let optionwrapper: HTMLElement = document.createElement("div");    
+    let headlineOne: HTMLElement = document.createElement("h2");    
+    let headlineTwo: HTMLElement = document.createElement("h2");    
+    let authorOne: HTMLElement = document.createElement("h3");
+    let authorTwo: HTMLElement = document.createElement("h3");
+    let audience: HTMLElement = document.createElement("p");
+    let publisher: HTMLElement = document.createElement("p")
+    let plot: HTMLElement = document.createElement("p")
+    let year: HTMLElement = document.createElement("p")
+    let pages: HTMLElement = document.createElement("p")
+    let lesserInfoCard: HTMLElement = document.createElement("div");
     
     // Add the Classes
     infowrapper.classList.add("infowrapper");
