@@ -22,23 +22,16 @@ let BookFolder: HTMLElement = document.querySelector("main");
 let API_Return: Array<BOOK>= [];
 
 // Fetch the data
-function fetchApi(): void {
-    fetch(`${BASE_URL}`)
-    .then(res => {
-        if (res.ok) {
-            return res.json();
-        } else {
-            return console.log("Something Went Very Wrong!");      
-    }})
-    .then(data => {
-        API_Return = data;
-        console.log(API_Return);
-        CreateBooks(API_Return);
-    })
-    .catch((error) => {
-        console.error(error.message);
-        console.log(error);
-    })
+async function fetchApi() {
+    try {
+    let ApiFetch = await fetch(`${BASE_URL}`)
+    API_Return = await ApiFetch.json(); 
+            console.log(API_Return);
+            CreateBooks(API_Return);
+    } catch (e) {
+        console.log(e);
+    }
+
 }
 
 // Generate the books from the fetch.
