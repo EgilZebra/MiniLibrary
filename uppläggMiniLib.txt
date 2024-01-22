@@ -45,4 +45,3 @@ Göra klart CSS
 Göra klart och snygga till Typescript
  - lägga i ordning
  - sortera kommentarer
-

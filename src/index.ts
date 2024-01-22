@@ -15,14 +15,12 @@ interface BOOK {
 };
 
 // Variables
-let NumberOfBooks: number = 0; 
-let bookname: string = "";
 let BASE_URL: string = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 let BookFolder: HTMLElement = document.querySelector("main");
 let API_Return: Array<BOOK>= [];
 
 // Fetch the data
-async function fetchApi() {
+async function fetchApi(): Promise<void> {
     try {
     let ApiFetch = await fetch(`${BASE_URL}`)
     API_Return = await ApiFetch.json(); 
